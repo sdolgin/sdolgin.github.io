@@ -1,0 +1,55 @@
+# Site settings
+title: Your Personal Blog
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to my personal blog where I share thoughts, experiences, and insights
+  on various topics including technology, life, and everything in between.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://sdolgin.github.io" # the base hostname & protocol for your site
+twitter_username: yourusername
+github_username: sdolgin
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

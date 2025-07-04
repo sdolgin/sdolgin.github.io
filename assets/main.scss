@@ -1,0 +1,54 @@
+---
+---
+
+@import "minima";
+
+/* Custom styles for the blog */
+.post-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-excerpt {
+  margin: 0.5rem 0;
+  color: #666;
+  font-style: italic;
+}
+
+.post-categories, .post-tags {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.category {
+  background-color: #f1f3f4;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.25rem;
+}
+
+.tag {
+  color: #1976d2;
+  margin-right: 0.5rem;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Homepage post list styling */
+.home .post-list li {
+  margin-bottom: 1.5rem;
+}
+
+.home .post-categories {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #666;
+}
