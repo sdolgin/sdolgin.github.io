@@ -3,52 +3,90 @@
 
 @import "minima";
 
-/* Custom styles for the blog */
+/* Define tropical color palette (accessible for colorblind) */
+$primary-color: #FF6F61;    // Coral (high contrast accent)
+$secondary-color: #008080;  // Teal
+$accent-color: #FFDAB9;     // Sandy peach
+$highlight-color: #004080;  // Deep blue
+$text-color: #333333;
+$bg-color: #F5FCFF;         // Light sky blue
+
+// Apply background and text
+body {
+  background: $bg-color;
+  color: $text-color;
+}
+
+// Header styling
+header.site-header {
+  background: linear-gradient(135deg, $secondary-color, $primary-color);
+  color: #ffffff;
+}
+
+// Links and post titles
+a, .post-link {
+  color: $highlight-color;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+// Post item border
 .post-item {
+  border-bottom: 2px solid $accent-color;
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e8e8e8;
 }
 
 .post-item:last-child {
   border-bottom: none;
 }
 
+// Excerpt styling
 .post-excerpt {
   margin: 0.5rem 0;
-  color: #666;
+  color: darken($text-color, 20%);
   font-style: italic;
 }
 
+// Categories and tags
 .post-categories, .post-tags {
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
 
 .category {
-  background-color: #f1f3f4;
+  background-color: $secondary-color;
+  color: #ffffff;
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
   margin-right: 0.25rem;
 }
 
 .tag {
-  color: #1976d2;
+  color: $highlight-color;
   margin-right: 0.5rem;
 }
 
+// Footer or meta info
 .post-meta {
-  color: #666;
+  color: darken($text-color, 40%);
   font-size: 0.9rem;
 }
 
-/* Homepage post list styling */
+// Homepage list tweaks
 .home .post-list li {
   margin-bottom: 1.5rem;
 }
-
 .home .post-categories {
   margin-top: 0.25rem;
   font-size: 0.85rem;
-  color: #666;
+  color: darken($text-color, 20%);
+}
+
+/* Add subtle box shadow to posts */
+.post-item {
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
