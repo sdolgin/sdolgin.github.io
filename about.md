@@ -12,13 +12,16 @@ Hey there! I’m Saul Dolgin, and this is the official start of my public blog�
 
 Professionally, I’m a software engineer with over 25 years of hands-on experience in software development, cloud infrastructure, and the wild world of IT. These days, I work remotely from home in Miami Beach as part of Microsoft’s Azure engineering team. I spend my work hours helping customers (from startups to massive enterprises) make sense of cloud platforms, infrastructure, DevOps, and how all these moving parts fit together.
 
+![Profile Photo](/assets/images/profile.jpg){: .profile-photo }
+
 But, you know, life isn’t all YAML files and CI/CD pipelines. When I log off, I’m a husband, dad to two awesome sons (Lucas and Andrew), and official wrangler of two Yorkshire terriers (with a soft spot for dogs—if it was practical, we’d have a whole herd running around).
 
 ## What Will You Find Here?
 
-Expect a mix of posts—sometimes deep dives on cloud platforms and technical guides, sometimes practical how-tos, and occasionally some reflections on life, parenting, retirement planning (I’m aiming for 55!), and living near the beach in sunny Florida. I’ll keep things casual, practical, and (hopefully) helpful. 
+Expect a mix of posts—sometimes deep dives on cloud platforms and technical guides, sometimes practical how-tos, and occasionally some reflections on life, parenting, retirement planning (I’m aiming for 55!), and living near the beach in sunny Florida. I’ll keep things casual, practical, and (hopefully) helpful.
 
 If you’re interested in:
+
 - **Azure** and cloud engineering tips (with the scars and war stories included)
 - Technical explorations for pros and tinkerers
 - Thoughtful takes on IT, remote work, and balancing work-life-family
