@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Surprising KQL Functions"
-date: 2025-07-27 12:00:00 -0000
+date: 2025-04-27 12:00:00 -0000
 categories: tutorial kql azure data-explorer anomaly-detection
 tags: [kql, azure, data-explorer, anomaly-detection, query-language]
 excerpt: "A beginner's guide to understanding KQL and its surprising functions."
