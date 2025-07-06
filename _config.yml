@@ -1,12 +1,11 @@
 # Site settings
-title: Your Personal Blog
-email: your-email@example.com
+title: Saul's Blog
+email: sdolgin@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my personal blog where I share thoughts, experiences, and insights
   on various topics including technology, life, and everything in between.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sdolgin.github.io" # the base hostname & protocol for your site
-twitter_username: yourusername
 github_username: sdolgin
 
 # Build settings
@@ -28,7 +27,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Your Name"
+      author: "Saul Dolgin"
   - scope:
       path: ""
     values:
