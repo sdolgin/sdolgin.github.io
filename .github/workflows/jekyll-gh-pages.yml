@@ -30,11 +30,33 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: '3.1'
+          bundler-cache: true
+      - name: Create production config
+        env:
+          APPINSIGHTS_CONNECTION_STRING: ${{ secrets.APPINSIGHTS_CONNECTION_STRING }}
+          APPINSIGHTS_INSTRUMENTATION_KEY: ${{ secrets.APPINSIGHTS_INSTRUMENTATION_KEY }}
+          APPINSIGHTS_WORKSPACE: ${{ secrets.APPINSIGHTS_WORKSPACE }}
+        run: |
+          if [ -n "$APPINSIGHTS_CONNECTION_STRING" ]; then
+            echo "Creating production Application Insights configuration..."
+            cat > _config.production.yml << EOF
+          application_insights:
+            connection_string: "$APPINSIGHTS_CONNECTION_STRING"
+            instrumentation_key: "$APPINSIGHTS_INSTRUMENTATION_KEY"
+            workspace: "$APPINSIGHTS_WORKSPACE"
+          EOF
+          else
+            echo "Warning: Application Insights secrets not configured. Site will build without analytics."
+            touch _config.production.yml
+          fi
+      - name: Build with Jekyll
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --config _config.yml,_config.production.yml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

@@ -12,6 +12,10 @@ github_username: sdolgin
 markdown: kramdown
 theme: minima
 
+# Application Insights Configuration
+# These values are loaded from environment variables via _plugins/environment.rb
+# The plugin will populate this section automatically
+
 # Only supported plugins for GitHub Pages
 plugins:
   - jekyll-feed
