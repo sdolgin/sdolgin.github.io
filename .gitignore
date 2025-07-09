@@ -15,6 +15,3 @@ _config.local.yml
 _config.production.yml
 
 # Documentation with example secrets (keep this one tracked for reference)
-
-Gemfile
-Gemfile.lock
