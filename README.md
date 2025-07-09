@@ -12,6 +12,7 @@ This is a personal blog built with Jekyll, featuring:
 - SEO optimization
 - RSS feed
 - Social media integration
+- Application Insights analytics for visitor tracking and performance monitoring
 
 ## Local Development
 
@@ -24,11 +25,23 @@ To run this site locally:
 
 2. **Serve the site:**
    ```bash
+   # For development with local configuration
+   ./dev-server.sh
+   
+   # Or use Jekyll directly
    bundle exec jekyll serve
    ```
 
 3. **View the site:**
    Open your browser to `http://localhost:4000`
+
+### Environment Configuration
+
+For local development with Application Insights:
+
+1. Copy `.env.example` to `.env.local`
+2. Add your Application Insights connection string to `.env.local`
+3. Use `./dev-server.sh` to run with environment variables loaded
 
 ## Writing Posts
 
@@ -74,6 +87,9 @@ This site is configured for GitHub Pages. Simply push your changes to the `main`
 ## File Structure
 
 ```
+├── .docs/               # Internal documentation (not rendered as site content)
+│   ├── APPLICATION_INSIGHTS_README.md
+│   └── GITHUB_SECRETS_SETUP.md
 ├── _config.yml          # Site configuration
 ├── _posts/              # Blog posts
 ├── _layouts/            # Page templates
@@ -83,8 +99,17 @@ This site is configured for GitHub Pages. Simply push your changes to the `main`
 ├── about.md             # About page
 ├── blog.md              # Blog listing page
 ├── Gemfile              # Ruby dependencies
+├── dev-server.sh        # Local development script
+├── build-production.sh  # Production build script
 └── README.md            # This file
 ```
+
+## Internal Documentation
+
+Technical documentation for this site is stored in the `.docs/` directory to prevent it from being rendered as site content:
+
+- **Application Insights Setup**: See `.docs/APPLICATION_INSIGHTS_README.md` for analytics configuration
+- **GitHub Secrets Setup**: See `.docs/GITHUB_SECRETS_SETUP.md` for CI/CD environment setup
 
 ## Support
 
