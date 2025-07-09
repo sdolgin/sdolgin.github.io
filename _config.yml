@@ -24,7 +24,7 @@ giscus:
   repository_id: "R_kgDOPGjeuQ"  # Optional: Repository ID (can be found in Giscus setup)
   category: "General"  # Discussion category name
   category_id: ""  # Optional: Category ID (can be found in Giscus setup)
-  mapping: "url"  # How to map pages to discussions (pathname, url, title, og:title)
+  mapping: "pathname"  # How to map pages to discussions (pathname, url, title, og:title)
   strict: "0"  # Use strict title matching (0 or 1)
   reactions_enabled: "1"  # Enable reactions (0 or 1)
   emit_metadata: "0"  # Emit discussion metadata (0 or 1)
