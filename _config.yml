@@ -21,10 +21,10 @@ theme: minima
 giscus:
   enabled: true  # Set to true to enable comments
   repository: "sdolgin/sdolgin.github.io"  # GitHub repository in format "owner/repo"
-  repository_id: "R_kgDOPGjeuQ"  # Optional: Repository ID (can be found in Giscus setup)
+  repository_id: "R_kgDOPGjeuQ"  # Repository ID (get this from https://giscus.app/)
   category: "General"  # Discussion category name
-  category_id: ""  # Optional: Category ID (can be found in Giscus setup)
-  mapping: "pathname"  # How to map pages to discussions (pathname, url, title, og:title)
+  category_id: "DIC_kwDOPGjeuc4CsrcY"  # Leave empty to auto-detect or get from https://giscus.app/
+  mapping: "title"  # How to map pages to discussions (pathname, url, title, og:title)
   strict: "0"  # Use strict title matching (0 or 1)
   reactions_enabled: "1"  # Enable reactions (0 or 1)
   emit_metadata: "0"  # Emit discussion metadata (0 or 1)
