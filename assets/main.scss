@@ -3,38 +3,61 @@
 
 @import "minima";
 
-/* Define tropical color palette (accessible for colorblind) */
-$primary-color: #FF6F61;    // Coral (high contrast accent)
-$secondary-color: #008080;  // Teal
-$accent-color: #FFDAB9;     // Sandy peach
-$highlight-color: #004080;  // Deep blue
-$text-color: #333333;
-$bg-color: #F5FCFF;         // Light sky blue
+/* CSS Custom Properties for Theme Support */
+:root {
+  /* Light mode colors (default tropical theme) */
+  --primary-color: #FF6F61;    /* Coral (high contrast accent) */
+  --secondary-color: #008080;  /* Teal */
+  --accent-color: #FFDAB9;     /* Sandy peach */
+  --highlight-color: #004080;  /* Deep blue */
+  --text-color: #333333;
+  --bg-color: #F5FCFF;         /* Light sky blue */
+  --post-bg: #ffffff;
+  --shadow-color: rgba(0,0,0,0.1);
+  --text-muted: #666666;
+  --text-meta: #999999;
+}
 
-// Apply background and text
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #FF8A80;    /* Lighter coral for dark backgrounds */
+    --secondary-color: #26A69A;  /* Lighter teal */
+    --accent-color: #4A4A4A;     /* Dark gray instead of sandy peach */
+    --highlight-color: #64B5F6;  /* Light blue for better contrast */
+    --text-color: #E0E0E0;       /* Light gray text */
+    --bg-color: #121212;         /* Dark background */
+    --post-bg: #1E1E1E;          /* Slightly lighter dark for posts */
+    --shadow-color: rgba(255,255,255,0.1);
+    --text-muted: #B0B0B0;
+    --text-meta: #808080;
+  }
+}
+
+// Apply background and text using CSS custom properties
 body {
-  background: $bg-color;
-  color: $text-color;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 // Header styling
 header.site-header {
-  background: linear-gradient(135deg, $secondary-color, $primary-color);
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
   color: #ffffff;
 }
 
 // Links and post titles
 a, .post-link {
-  color: $highlight-color;
+  color: var(--highlight-color);
   transition: color 0.2s ease-in-out;
   &:hover {
-    color: $primary-color;
+    color: var(--primary-color);
   }
 }
 
 // Post item border
 .post-item {
-  border-bottom: 2px solid $accent-color;
+  border-bottom: 2px solid var(--accent-color);
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
 }
@@ -46,7 +69,7 @@ a, .post-link {
 // Excerpt styling
 .post-excerpt {
   margin: 0.5rem 0;
-  color: darken($text-color, 20%);
+  color: var(--text-muted);
   font-style: italic;
 }
 
@@ -57,7 +80,7 @@ a, .post-link {
 }
 
 .category {
-  background-color: $secondary-color;
+  background-color: var(--secondary-color);
   color: #ffffff;
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
@@ -65,13 +88,13 @@ a, .post-link {
 }
 
 .tag {
-  color: $highlight-color;
+  color: var(--highlight-color);
   margin-right: 0.5rem;
 }
 
 // Footer or meta info
 .post-meta {
-  color: darken($text-color, 40%);
+  color: var(--text-meta);
   font-size: 0.9rem;
 }
 
@@ -82,13 +105,13 @@ a, .post-link {
 .home .post-categories {
   margin-top: 0.25rem;
   font-size: 0.85rem;
-  color: darken($text-color, 20%);
+  color: var(--text-muted);
 }
 
 /* Add subtle box shadow to posts */
 .post-item {
-  background: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: var(--post-bg);
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .profile-photo {
