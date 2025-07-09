@@ -19,9 +19,9 @@ theme: minima
 # Giscus Comments Configuration
 # To enable comments, set enabled: true and configure the repository settings
 giscus:
-  enabled: false  # Set to true to enable comments
-  repository: ""  # GitHub repository in format "owner/repo"
-  repository_id: ""  # Optional: Repository ID (can be found in Giscus setup)
+  enabled: true  # Set to true to enable comments
+  repository: "sdolgin/sdolgin.github.io"  # GitHub repository in format "owner/repo"
+  repository_id: "R_kgDOPGjeuQ"  # Optional: Repository ID (can be found in Giscus setup)
   category: "General"  # Discussion category name
   category_id: ""  # Optional: Category ID (can be found in Giscus setup)
   mapping: "pathname"  # How to map pages to discussions (pathname, url, title, og:title)
