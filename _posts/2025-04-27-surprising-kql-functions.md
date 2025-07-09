@@ -110,7 +110,7 @@ If the data exists, KQL will probably talk to it.
 
 Because tools like this change your relationship with data.
 
-ADX/KQL doesn’t ask you to predefine structure. It rewards curiosity. It encourages poking, prodding, and pushing until things make sense. And that—more than any flashy feature—is the mark of a tool built by engineers who have suffered.
+ADX/KQL doesn’t ask you to predefine structure. It rewards curiosity. It encourages poking, prodding, and pushing until things make sense. And that, more than any flashy feature, is the mark of a tool built by engineers who have suffered.
 
 KQL is the closest I’ve found to a query language that behaves like a reasoning partner. You give it clues. It gives you back intuition.
 
