@@ -3,10 +3,14 @@
 <div class="giscus-comments">
   <script src="https://giscus.app/client.js"
     data-repo="{{ site.giscus.repository }}"
-    data-repo-id="{{ site.giscus.repository_id | default: '' }}"
-    data-category="{{ site.giscus.category | default: 'General' }}"
-    data-category-id="{{ site.giscus.category_id | default: '' }}"
-    data-mapping="{{ site.giscus.mapping | default: 'pathname' }}"
+    {%- if site.giscus.repository_id and site.giscus.repository_id != '' %}
+    data-repo-id="{{ site.giscus.repository_id }}"
+    {%- endif %}
+    data-category="{{ site.giscus.category | default: 'Announcements' }}"
+    {%- if site.giscus.category_id and site.giscus.category_id != '' %}
+    data-category-id="{{ site.giscus.category_id }}"
+    {%- endif %}
+    data-mapping="{{ site.giscus.mapping | default: 'title' }}"
     data-strict="{{ site.giscus.strict | default: '0' }}"
     data-reactions-enabled="{{ site.giscus.reactions_enabled | default: '1' }}"
     data-emit-metadata="{{ site.giscus.emit_metadata | default: '0' }}"
