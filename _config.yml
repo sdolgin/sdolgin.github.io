@@ -16,6 +16,23 @@ theme: minima
 # These values are loaded from environment variables via _plugins/environment.rb
 # The plugin will populate this section automatically
 
+# Giscus Comments Configuration
+# To enable comments, set enabled: true and configure the repository settings
+giscus:
+  enabled: true  # Set to true to enable comments
+  repository: "sdolgin/sdolgin.github.io"  # GitHub repository in format "owner/repo"
+  repository_id: "R_kgDOPGjeuQ"  # Optional: Repository ID (can be found in Giscus setup)
+  category: "General"  # Discussion category name
+  category_id: ""  # Optional: Category ID (can be found in Giscus setup)
+  mapping: "pathname"  # How to map pages to discussions (pathname, url, title, og:title)
+  strict: "0"  # Use strict title matching (0 or 1)
+  reactions_enabled: "1"  # Enable reactions (0 or 1)
+  emit_metadata: "0"  # Emit discussion metadata (0 or 1)
+  input_position: "bottom"  # Comment input position (top or bottom)
+  theme: "preferred_color_scheme"  # Theme (light, dark, preferred_color_scheme, etc.)
+  lang: "en"  # Language
+  loading: "lazy"  # Loading mode (lazy or eager)
+
 # Only supported plugins for GitHub Pages
 plugins:
   - jekyll-feed
