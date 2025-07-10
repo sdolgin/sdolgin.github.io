@@ -121,3 +121,129 @@ a, .post-link {
   height: 150px;
   border-radius: 50%;
 }
+
+/* Code block styling for better readability */
+pre, code {
+  background-color: var(--post-bg);
+  border: 1px solid var(--accent-color);
+}
+
+/* Table styling for light mode */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* Alternate row colors for better readability in light mode */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Dark mode specific code styling */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --code-bg: #2d2d2d;
+    --code-border: #404040;
+    --code-text: #f8f8f2;
+  }
+  
+  /* Code blocks and inline code */
+  pre, code {
+    background-color: var(--code-bg) !important;
+    border: 1px solid var(--code-border);
+    color: var(--code-text) !important;
+  }
+  
+  /* Syntax highlighting - override minima theme colors for dark mode */
+  .highlight {
+    background-color: var(--code-bg) !important;
+    color: var(--code-text) !important;
+    
+    /* Language-specific syntax colors that work well on dark backgrounds */
+    .c, .cm, .c1, .cs { color: #75715e !important; }  /* Comments - gray */
+    .k, .kc, .kd, .kn, .kp, .kr, .kt { color: #66d9ef !important; }  /* Keywords - light blue */
+    .s, .sb, .sc, .sd, .s2, .sh, .si, .sx, .s1 { color: #a6e22e !important; }  /* Strings - green */
+    .n, .na, .nc, .nd, .ne, .nf, .ni, .nl, .nn, .no, .nt, .nv { color: #f8f8f2 !important; }  /* Names - light gray */
+    .m, .mf, .mh, .mi, .mo { color: #ae81ff !important; }  /* Numbers - purple */
+    .o, .ow { color: #f92672 !important; }  /* Operators - pink */
+    .p { color: #f8f8f2 !important; }  /* Punctuation - light gray */
+    .err { color: #f92672 !important; background-color: #1e0010 !important; }  /* Errors - red */
+    
+    /* Generic highlighting */
+    .g { color: #f8f8f2 !important; }
+    .gd { color: #f92672 !important; }  /* Deleted - red */
+    .gi { color: #a6e22e !important; }  /* Inserted - green */
+    .go { color: #888888 !important; }  /* Output - gray */
+    .gp { color: #f92672 !important; }  /* Prompt - red */
+    .gr { color: #f92672 !important; }  /* Error - red */
+    .gt { color: #f92672 !important; }  /* Traceback - red */
+    .gh { color: #f8f8f2 !important; }  /* Heading - light gray */
+    .gu { color: #75715e !important; }  /* Subheading - gray */
+  }
+  
+  /* Ensure code blocks have proper padding and margin */
+  .highlight pre {
+    padding: 1rem !important;
+    margin: 1rem 0 !important;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+  
+  /* Table styling for dark mode */
+  table {
+    background-color: var(--code-bg) !important;
+    border: 1px solid var(--code-border) !important;
+    border-collapse: collapse !important;
+    width: 100%;
+    margin: 1rem 0 !important;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    background-color: var(--code-bg) !important;
+    color: var(--code-text) !important;
+    border: 1px solid var(--code-border) !important;
+    padding: 0.75rem !important;
+    text-align: left !important;
+  }
+  
+  th {
+    background-color: #3a3a3a !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+  }
+  
+  /* Alternate row colors for better readability */
+  tbody tr:nth-child(even) {
+    background-color: #333333 !important;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: var(--code-bg) !important;
+  }
+  
+  /* Ensure table content is readable */
+  tbody tr:nth-child(even) td {
+    background-color: #333333 !important;
+  }
+  
+  tbody tr:nth-child(odd) td {
+    background-color: var(--code-bg) !important;
+  }
+}
