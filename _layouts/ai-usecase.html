@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<article class="ai-usecase">
+  <header class="usecase-header">
+    <h1 class="usecase-title">{{ page.title | escape }}</h1>
+    {% if page.subtitle %}
+    <p class="usecase-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    {% if page.categories %}
+    <div class="usecase-categories">
+      {% for category in page.categories %}
+      <span class="usecase-category">{{ category }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="usecase-content">
+    {{ content }}
+  </div>
+
+  <nav class="usecase-navigation">
+    <h3>Explore More AI Use Cases</h3>
+    <div class="nav-cards">
+      {% assign usecases = site.pages | where_exp: "p", "p.layout == 'ai-usecase'" | where_exp: "p", "p.url != page.url" %}
+      {% for usecase in usecases %}
+      <a href="{{ usecase.url | relative_url }}" class="nav-card">
+        <span class="nav-card-icon">{{ usecase.icon | default: "🤖" }}</span>
+        <span class="nav-card-title">{{ usecase.title }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </nav>
+
+  {% if site.giscus.enabled %}
+  <div class="usecase-comments">
+    <h3>Discussion</h3>
+    {% include giscus-comments.html %}
+  </div>
+  {% endif %}
+</article>
