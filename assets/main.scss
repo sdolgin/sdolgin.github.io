@@ -444,7 +444,7 @@ tbody tr:nth-child(even) {
     }
     
     &:hover {
-      background: linear-gradient(to right, rgba(var(--primary-color), 0.05), var(--card-bg));
+      background: linear-gradient(to right, rgba(255, 111, 97, 0.05), var(--card-bg));
     }
   }
   
