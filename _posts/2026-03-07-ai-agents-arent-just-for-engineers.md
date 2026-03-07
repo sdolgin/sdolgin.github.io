@@ -28,6 +28,7 @@ An AI *agent* is proactive. You give it a goal, and it figures out the steps to 
 <!-- Diagram: Chatbot vs. Agent — to be rendered as SVG by Gilfoyle -->
 <!-- See .squad/research/visuals/2026-03-07-ai-agents-visuals.md for Mermaid source and style notes -->
 
+
 When GitHub launched [Copilot's agent mode](https://github.blog/news-insights/product-news/github-copilot-the-agent-awakens/) in early 2025, this is exactly what it demonstrated: an AI that could infer subtasks, run commands, and self-correct errors autonomously. That was a developer tool. But the pattern (give a goal, let the agent figure it out) is universal.
 
 ## Why This Matters Right Now
@@ -110,6 +111,7 @@ Before you go spinning up agents for everything, a few principles that will save
 
 [![XKCD 1319: Automation](https://imgs.xkcd.com/comics/automation.png)](https://xkcd.com/1319)
 *[XKCD 1319: Automation](https://xkcd.com/1319) — "Theory vs. Reality" of automating tasks. Licensed under [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/).*
+
 
 ## The Part Where I'm Honest About the Limitations
 
