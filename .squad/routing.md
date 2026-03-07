@@ -11,6 +11,7 @@ How to decide who handles what.
 | Technical writing, blog post drafting | Richard | Draft posts in `_posts/`, write complete first drafts from research briefs |
 | Quality review, editing, tone consistency | Monica | Review drafts, verify front matter, provide revision notes, enforce quality bar |
 | Visual direction, image curation, attribution | Erlich | Find CC images, locate XKCD strips, suggest AI art prompts, spec diagrams |
+| Publish readiness, post→publish promotion | Lead | Run Publish Readiness checklist (see ceremonies.md) — verify visuals are embedded, not just briefed |
 | Jekyll, automation, infrastructure, SEO | Gilfoyle | Config, workflows, templates, GitHub Actions, performance, repo tooling |
 | Code review | Monica (content), Gilfoyle (technical) | Review PRs for quality, accuracy, and technical correctness |
 | Scope & priorities | Jared | What to write next, trade-offs, backlog decisions |

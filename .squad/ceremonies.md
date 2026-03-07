@@ -39,3 +39,25 @@
 2. Root cause analysis
 3. What should change?
 4. Action items for next iteration
+
+---
+
+## Publish Readiness
+
+| Field | Value |
+|-------|-------|
+| **Trigger** | manual |
+| **When** | before |
+| **Condition** | post moving from `post/*` branch to `publish/*` branch |
+| **Facilitator** | lead |
+| **Participants** | Richard, Erlich, Monica |
+| **Time budget** | focused |
+| **Enabled** | ✅ yes |
+
+**Checklist:**
+1. Visual brief exists on the `post/*` branch (Erlich)
+2. All approved visuals have embed codes integrated into the post markdown — not just in the `.squad/` brief
+3. Images saved to `assets/images/` are committed to the `publish/*` branch
+4. Every image has alt text and proper attribution (CC license, XKCD source link, AI generation note)
+5. Monica has reviewed the post with visuals in place
+6. Any pending visuals (e.g., diagrams needing rendering, AI art needing generation) are tracked as HTML comments in the post
