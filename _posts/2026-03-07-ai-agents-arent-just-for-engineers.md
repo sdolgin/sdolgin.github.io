@@ -25,6 +25,10 @@ A regular AI chatbot is reactive. You ask it a question, it gives you an answer,
 
 An AI *agent* is proactive. You give it a goal, and it figures out the steps to get there. It can break a task into subtasks, use tools, check its own work, and iterate until the job is done. It's less like texting a friend and more like delegating to a capable junior associate (one who works at 3 AM without complaining about it).
 
+<!-- Diagram: Chatbot vs. Agent — to be rendered as SVG by Gilfoyle -->
+<!-- See .squad/research/visuals/2026-03-07-ai-agents-visuals.md for Mermaid source and style notes -->
+
+
 When GitHub launched [Copilot's agent mode](https://github.blog/news-insights/product-news/github-copilot-the-agent-awakens/) in early 2025, this is exactly what it demonstrated: an AI that could infer subtasks, run commands, and self-correct errors autonomously. That was a developer tool. But the pattern (give a goal, let the agent figure it out) is universal.
 
 ## Why This Matters Right Now
@@ -104,6 +108,10 @@ Before you go spinning up agents for everything, a few principles that will save
 **2. Stay in the loop.** Agents are capable, not infallible. The best pattern right now is "agent does the first draft, human does the review." You're the editor-in-chief, not the typist. This is the [human-in-the-loop model](/2025/07/09/your-job-isnt-obsolete-your-workflow-is/) I talked about before. Your judgment is the quality gate.
 
 **3. Think in workflows, not features.** Don't ask "what can this AI tool do?" Ask "what does my workflow look like, and where does an agent slot in?" The tool's feature list is irrelevant if it doesn't map to the way you actually work.
+
+[![XKCD 1319: Automation](https://imgs.xkcd.com/comics/automation.png)](https://xkcd.com/1319)
+*[XKCD 1319: Automation](https://xkcd.com/1319) — "Theory vs. Reality" of automating tasks. Licensed under [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/).*
+
 
 ## The Part Where I'm Honest About the Limitations
 
