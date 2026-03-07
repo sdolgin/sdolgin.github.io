@@ -69,16 +69,20 @@ jobs:
             }
 
             const members = [];
-            let inMembersTable = false;
+            let inTable = false;
+            let tableSection = '';
             for (const line of lines) {
-              if (line.match(/^##\s+(Members|Team Roster)/i)) {
-                inMembersTable = true;
+              if (line.match(/^##\s+(Members|Team Roster|Coordinator)/i)) {
+                inTable = true;
+                tableSection = line;
                 continue;
               }
-              if (inMembersTable && line.startsWith('## ')) {
-                break;
+              if (inTable && line.startsWith('## ')) {
+                inTable = line.match(/^##\s+(Members|Team Roster|Coordinator)/i) != null;
+                tableSection = line;
+                continue;
               }
-              if (inMembersTable && line.startsWith('|') && !line.includes('---') && !line.includes('Name')) {
+              if (inTable && line.startsWith('|') && !line.includes('---') && !line.includes('Name')) {
                 const cells = line.split('|').map(c => c.trim()).filter(Boolean);
                 if (cells.length >= 2 && cells[0] !== 'Scribe') {
                   members.push({
