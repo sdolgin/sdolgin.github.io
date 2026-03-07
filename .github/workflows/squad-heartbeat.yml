@@ -55,14 +55,17 @@ jobs:
             // Parse members from roster
             const lines = content.split('\n');
             const members = [];
-            let inMembersTable = false;
+            let inTable = false;
             for (const line of lines) {
-              if (line.match(/^##\s+(Members|Team Roster)/i)) {
-                inMembersTable = true;
+              if (line.match(/^##\s+(Members|Team Roster|Coordinator)/i)) {
+                inTable = true;
                 continue;
               }
-              if (inMembersTable && line.startsWith('## ')) break;
-              if (inMembersTable && line.startsWith('|') && !line.includes('---') && !line.includes('Name')) {
+              if (inTable && line.startsWith('## ')) {
+                inTable = line.match(/^##\s+(Members|Team Roster|Coordinator)/i) != null;
+                continue;
+              }
+              if (inTable && line.startsWith('|') && !line.includes('---') && !line.includes('Name')) {
                 const cells = line.split('|').map(c => c.trim()).filter(Boolean);
                 if (cells.length >= 2 && !['Scribe', 'Ralph'].includes(cells[0])) {
                   members.push({
