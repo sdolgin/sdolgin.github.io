@@ -1,0 +1,24 @@
+{
+  "assignment_cast_snapshots": {
+    "repl-cast-2026-03-06T23:06:54.026Z": {
+      "created_at": "2026-03-06T23:06:54.026Z",
+      "agents": [
+        "dinesh",
+        "jared",
+        "richard",
+        "monica",
+        "erlich",
+        "gilfoyle",
+        "scribe",
+        "ralph"
+      ],
+      "universe": "Silicon Valley"
+    }
+  },
+  "universe_usage_history": [
+    {
+      "universe": "Silicon Valley",
+      "used_at": "2026-03-06T23:06:54.026Z"
+    }
+  ]
+}
