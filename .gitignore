@@ -15,3 +15,8 @@ _config.local.yml
 _config.production.yml
 
 # Documentation with example secrets (keep this one tracked for reference)/tmp/
+# Squad: ignore generated/ephemeral data
+.squad/orchestration-log/
+.squad/log/
+.squad/sessions/
+.squad/plugins/
