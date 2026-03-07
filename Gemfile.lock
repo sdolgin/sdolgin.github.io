@@ -32,7 +32,6 @@ GEM
       base64 (>= 0.2)
       logger (~> 1.6)
       simpleidn (~> 0.2.1)
-    dotenv (3.1.8)
     drb (2.2.3)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -305,7 +304,6 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  dotenv
   github-pages
 
 BUNDLED WITH
