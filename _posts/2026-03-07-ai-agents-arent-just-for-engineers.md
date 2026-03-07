@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI Agents Aren't Just for Engineers. Here's How to Get Started."
-date: 2026-03-07 12:00:00 -0000
+date: 2026-03-07
 categories: [AI, Future of Work]
 tags: [AI, Agents, Copilot, Automation, No-Code]
 excerpt: "You don't need to write code to have AI agents working for you. Here's the practical, non-intimidating guide to building your own agent team."
