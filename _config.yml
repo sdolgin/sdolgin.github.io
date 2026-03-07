@@ -13,8 +13,8 @@ markdown: kramdown
 theme: minima
 
 # Application Insights Configuration
-# These values are loaded from environment variables via _plugins/environment.rb
-# The plugin will populate this section automatically
+# At build time, the GitHub Actions workflow generates _config.production.yml
+# from GitHub Secrets and merges it via --config _config.yml,_config.production.yml
 
 # Giscus Comments Configuration
 # To enable comments, set enabled: true and configure the repository settings
