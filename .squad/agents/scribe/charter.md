@@ -12,8 +12,9 @@
 ## What I Own
 
 - Maintaining decisions.md
-- cross-agent context sharing
-- orchestration logging
+- Cross-agent context sharing
+- Orchestration logging
+- **Issue thread updates** — after a session produces deliverables for an issue, post a summary comment to the GitHub issue with: what was done, files changed, commits or PRs created, and any open follow-ups. Use `gh issue comment {number} --body "message"`.
 
 ## How I Work
 
@@ -23,7 +24,7 @@
 
 ## Boundaries
 
-**I handle:** Maintaining decisions.md, cross-agent context sharing, orchestration logging, session logging, git commits
+**I handle:** Maintaining decisions.md, cross-agent context sharing, orchestration logging, session logging, git commits, posting session summaries to GitHub issue threads
 
 **I don't handle:** Work outside my domain — the coordinator routes that elsewhere.
 

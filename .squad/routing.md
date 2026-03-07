@@ -55,6 +55,11 @@ When triaging, the Lead should ask:
 6. **Anticipate downstream work.** If a feature is being built, spawn the tester to write test cases from requirements simultaneously.
 7. **Issue-labeled work** — when a `squad:{member}` label is applied to an issue, route to that member. The Lead handles all `squad` (base label) triage.
 8. **@copilot routing** — when evaluating issues, check @copilot's capability profile in `team.md`. Route 🟢 good-fit tasks to `squad:copilot`. Flag 🟡 needs-review tasks for PR review. Keep 🔴 not-suitable tasks with squad members.
+9. **Issue visibility** — when work relates to a GitHub issue, post comments at key milestones so progress is visible in the issue thread:
+   - **Work started:** Coordinator posts when dispatching an agent (who's working, what they're doing, which branch)
+   - **Work completed:** Scribe posts a summary when the session produces deliverables (what was done, files changed, commits/PRs created)
+   - **Blocked/handed off:** Agent or coordinator posts when work is blocked or handed to another agent
+   - Use `gh issue comment {number} --body "message"` to post updates
 
 ## Work Type → Agent
 
