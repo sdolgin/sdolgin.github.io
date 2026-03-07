@@ -10,11 +10,12 @@ permissions:
 
 jobs:
   triage:
-    if: github.event.label.name == 'squad'
+    if: github.event.label.name == 'squad' || startsWith(github.event.label.name, 'squad:')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          ref: dev
       - name: Triage issue via Lead agent
         uses: actions/github-script@v7
         with:
@@ -122,8 +123,22 @@ jobs:
             let triageReason = '';
             let copilotTier = null;
 
+            // Check if a squad:{member} label was applied directly (skip auto-routing)
+            const labelName = context.payload.label.name;
+            const directAssign = labelName.startsWith('squad:') && labelName !== 'squad';
+            if (directAssign) {
+              const memberName = labelName.replace('squad:', '');
+              const match = memberName === 'copilot'
+                ? { name: '@copilot', role: 'Coding Agent' }
+                : members.find(m => m.name.toLowerCase() === memberName);
+              if (match) {
+                assignedMember = match;
+                triageReason = `Directly assigned via \`${labelName}\` label`;
+              }
+            }
+
             // First, evaluate @copilot fit if enabled
-            if (hasCopilot) {
+            if (!assignedMember && hasCopilot) {
               const isNotSuitable = notSuitableKeywords.some(kw => issueText.includes(kw));
               const isGoodFit = !isNotSuitable && goodFitKeywords.some(kw => issueText.includes(kw));
               const isNeedsReview = !isNotSuitable && !isGoodFit && needsReviewKeywords.some(kw => issueText.includes(kw));
@@ -191,13 +206,15 @@ jobs:
             const isCopilot = assignedMember.name === '@copilot';
             const assignLabel = isCopilot ? 'squad:copilot' : `squad:${assignedMember.name.toLowerCase()}`;
 
-            // Add the member-specific label
-            await github.rest.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issue.number,
-              labels: [assignLabel]
-            });
+            // Add the member-specific label (skip if already applied via direct assignment)
+            if (!directAssign) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: [assignLabel]
+              });
+            }
 
             // Apply default triage verdict
             await github.rest.issues.addLabels({
