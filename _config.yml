@@ -56,7 +56,6 @@ defaults:
 
 # Header navigation pages (in order)
 header_pages:
-  - ai-use-cases/index.md
   - blog.md
   - about.md
 
