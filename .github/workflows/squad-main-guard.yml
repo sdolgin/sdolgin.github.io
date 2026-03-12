@@ -2,10 +2,10 @@ name: Squad Protected Branch Guard
 
 on:
   pull_request:
-    branches: [main, preview, insider]
+    branches: [main]
     types: [opened, synchronize, reopened]
   push:
-    branches: [main, preview, insider]
+    branches: [main]
 
 permissions:
   contents: read
@@ -122,7 +122,7 @@ jobs:
               '```',
               '',
               '> ⚠️ `.ai-team/` and `.squad/` are committed on `dev` and feature branches by design.',
-              '> The guard workflow is the enforcement mechanism that keeps these files off `main` and `preview`.',
+              '> The guard workflow is the enforcement mechanism that keeps these files off `main`.',
               '> `git rm --cached` untracks them from this PR without deleting your local copies.',
             ];
 
